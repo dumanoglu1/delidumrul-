@@ -1,43 +1,71 @@
 <style>
-    }
-
     button {
-        background: none;
+        background-color: #4CAF50;
         border: none;
-        padding: 0;
-        font-family: 'Fraunces', sans-serif;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
         font-size: 24px;
-        font-weight: bold;
+        margin: 4px 2px;
         cursor: pointer;
-        color: #001f3f;
+        border-radius: 12px;
+        font-family: 'Fraunces', sans-serif;
+        font-weight: bold;
     }
 
     .separator {
-        margin: 0 10px;
+        font-size: 24px;
+        color: #4CAF50;
     }
 
     .heading {
         font-family: 'Fraunces', sans-serif;
         font-size: 40px;
         font-weight: bold;
-        color: #001f3f;
+        color: #4CAF50;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container button {
         margin-bottom: 10px;
     }
+
+    @media only screen and (min-width: 600px) {
+        .button-container {
+            flex-direction: row;
+        }
+
+        .button-container button {
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+    }
+
 </style>
 
 <div class="button-container">
     <div class="heading">DELI DIYARI</div>
     <button onclick="window.location.href='https://devnet.dymension.xyz/rollapp/delidumrul_4145370-1/metrics'">Rollapp</button>
     <span class="separator">⟡</span>
-    <button onclick="window.location.href='www.discord.com'">Faucet</button>
+    <button onclick="window.location.href='https://www.discord.com'">Faucet</button>
     <span class="separator">⟡</span>
 </div>
 
 <div style="display: flex; justify-content: center;">
     <iframe
-    src="https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x9aEed5cF80A39255E1AF954687cef6880a9EF36E&chain=%7B%22name%22%3A%22delidumrul_4145370-1%22%2C%22chain%22%3A%22%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fevm.delidumrul.online%22%5D%2C%22nativeCurrency%22%3A%7B%22symbol%22%3A%22dld%22%2C%22name%22%3A%22dld%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22delidumrul4145370-1%22%2C%22chainId%22%3A4145370%2C%22testnet%22%3Atrue%2C%22slug%22%3A%22delidumrul4145370-1%22%7D&clientId=ffba82f529a4473602ee10eb6aaf1686&tokenId=0&theme=light&primaryColor=purple"
-    width="600px"
-    height="600px"
-    style="max-width:100%;"
-    frameborder="0"
-></iframe>
+        src="https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x9aEed5cF80A39255E1AF954687cef6880a9EF36E&chain=%7B%22name%22%3A%22delidumrul_4145370-1%22%2C%22chain%22%3A%22%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fevm.delidumrul.online%22%5D%2C%22nativeCurrency%22%3A%7B%22symbol%22%3A%22dld%22%2C%22name%22%3A%22dld%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22delidumrul4145370-1%22%2C%22chainId%22%3A4145370%2C%22testnet%22%3Atrue%2C%22slug%22%3A%22delidumrul4145370-1%22%7D&clientId=ffba82f529a4473602ee10eb6aaf1686&tokenId=0&theme=light&primaryColor=purple"
+        width="600px"
+        height="600px"
+        style="max-width:100%;"
+        frameborder="0"
+    ></iframe>
+</div>
