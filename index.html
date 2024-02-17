@@ -1,77 +1,92 @@
-<style>
-    body {
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    button {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 24px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 12px;
-        font-family: 'Fraunces', sans-serif;
-        font-weight: bold;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Minting Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
 
-    .separator {
-        font-size: 24px;
-        color: #4CAF50;
-    }
+        .light-beams {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 70%);
+            background-size: 200% 200%;
+            animation: beams 10s linear infinite;
+        }
 
-    .heading {
-        font-family: 'Fraunces', sans-serif;
-        font-size: 40px;
-        font-weight: bold;
-        color: #4CAF50;
-        margin-bottom: 20px;
-        text-align: center;
-    }
+        @keyframes beams {
+            0% {
+                background-position: 0 0;
+            }
 
-    .button-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+            100% {
+                background-position: 200% 200%;
+            }
+        }
 
-    .button-container button {
-        margin-bottom: 10px;
-    }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding-top: 50px;
+        }
 
-    @media only screen and (min-width: 600px) {
+        .heading {
+            font-family: 'Fraunces', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
         .button-container {
-            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
         }
 
-        .button-container button {
-            margin-right: 10px;
-            margin-bottom: 0;
+        .button-container a {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            font-family: 'Fraunces', sans-serif;
+            font-weight: bold;
         }
-    }
 
-</style>
+    </style>
+</head>
 
-<div class="button-container">
-    <div class="heading">DELI DIYARI</div>
-    <button onclick="window.location.href='https://devnet.dymension.xyz/rollapp/delidumrul_4145370-1/metrics'">Rollapp</button>
-    <span class="separator">⟡</span>
-    <button onclick="window.location.href='https://www.discord.com'">Faucet</button>
-    <span class="separator">⟡</span>
-</div>
+<body>
+    <div class="light-beams"></div>
+    <div class="content">
+        <div class="heading">DELI DIYARI</div>
+    </div>
+    <div class="button-container">
+        <a href="https://devnet.dymension.xyz/rollapp/delidumrul_4145370-1/metrics">Rollapp</a>
+        <a href="https://www.discord.com">Faucet</a>
+    </div>
+</body>
 
-<div style="display: flex; justify-content: center;">
-    <iframe
-        src="https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x9aEed5cF80A39255E1AF954687cef6880a9EF36E&chain=%7B%22name%22%3A%22delidumrul_4145370-1%22%2C%22chain%22%3A%22%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fevm.delidumrul.online%22%5D%2C%22nativeCurrency%22%3A%7B%22symbol%22%3A%22dld%22%2C%22name%22%3A%22dld%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22delidumrul4145370-1%22%2C%22chainId%22%3A4145370%2C%22testnet%22%3Atrue%2C%22slug%22%3A%22delidumrul4145370-1%22%7D&clientId=ffba82f529a4473602ee10eb6aaf1686&tokenId=0&theme=light&primaryColor=purple"
-        width="600px"
-        height="600px"
-        style="max-width:100%;"
-        frameborder="0"
-    ></iframe>
-</div>
+</html>
